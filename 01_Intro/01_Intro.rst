@@ -13,7 +13,7 @@ Azure Portal vs Azure Cloud Shell vs Azure CLI
 |             | * Does not require any installation                                              | * Not reproducible                            |
 |             | * Provides a visual representation of everything                                 |                                               |
 +-------------+----------------------------------------------------------------------------------+-----------------------------------------------+
-| Cloud Shell | * Provides preinstalled software (e.g. git)                                      |                                               |
+| Cloud Shell | * Provides preinstalled software (e.g. git)                                      | * No access to local files or tools           |
 |             | * Compatible with VSCode and a mobile app                                        |                                               |
 |             | * Latest version is always available                                             |                                               |
 |             | * Persistent storage is attached so you can create/save scripts, templates, etc. |                                               |
