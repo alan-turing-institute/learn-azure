@@ -5,6 +5,7 @@
 Azure Portal vs Azure Cloud Shell vs Azure CLI
 ==============================================
 
+* CLI = Command Line Interface
 
 +-------------+----------------------------------------------------------------------------------+-----------------------------------------------+
 |             | **Pros**                                                                         | **Cons**                                      |
@@ -17,4 +18,7 @@ Azure Portal vs Azure Cloud Shell vs Azure CLI
 |             | * Compatible with VSCode and a mobile app                                        |                                               |
 |             | * Latest version is always available                                             |                                               |
 |             | * Persistent storage is attached so you can create/save scripts, templates, etc. |                                               |
++-------------+----------------------------------------------------------------------------------+-----------------------------------------------+
+| CLI         | * Access to local files, tools and environments                                  | * Need to keep it updated                     |
+|             | * OS agnostic                                                                    |                                               |
 +-------------+----------------------------------------------------------------------------------+-----------------------------------------------+
