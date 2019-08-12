@@ -81,6 +81,7 @@ In the Portal
 |                                                                                                                                   |
 | There are *a lot* of different VM types and sizes available within Azure and it can seem overwhelming when trying to pick one.    |
 | However, they have been categorised into *families* that contain similar virtual hardware and are targeted for certain workloads. |
+|                                                                                                                                   |
 | * *General Purpose* - Great for developing, testing or low-use production.                                                        |
 | * *Compute optimised* - High performance CPUs for production servers.                                                             |
 | * *Memory optimised* - Larger memory options for big databases or in-memory intensive data processing.                            |
