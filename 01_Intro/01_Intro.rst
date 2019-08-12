@@ -26,6 +26,12 @@ Azure Portal vs Azure Cloud Shell vs Azure CLI
 Creating a Virtual Machine
 ==========================
 
+In the Portal
+-------------
+
+.. image:: ../figures/01_Intro/portal_vm_step1.png
+
+
 +------------------------------------------------------------------------------------------------------------------------------------+
 | **Info:** Secure shell (SSH) key pairs                                                                                             |
 |                                                                                                                                    |
