@@ -211,7 +211,8 @@ These commands will be identical in either the Cloud Shell or CLI.
             --size Standard_D2S_v3 \
             --output table
 
-This approach in much less involved than through the Portal and these commands can be collated into a script so that they can be executed autmoatically.
+This approach in much less involved than through the Portal.
+These commands can also be collated into a script so that they can be executed automatically.
 
 Introduction to the Azure CLI
 =============================
