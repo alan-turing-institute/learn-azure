@@ -76,11 +76,18 @@ In the Portal
 | It is good practice to co-locate resources that interact with each other in order to reduce connection times.                                                         |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-+---+
-| **Info:** Azure VM types |
-| |
-| |
-+---+
++-----------------------------------------------------------------------------------------------------------------------------------+
+| **Info:** Azure VM sizes                                                                                                          |
+|                                                                                                                                   |
+| There are *a lot* of different VM types and sizes available within Azure and it can seem overwhelming when trying to pick one.    |
+| However, they have been categorised into *families* that contain similar virtual hardware and are targeted for certain workloads. |
+| * *General Purpose* - Great for developing, testing or low-use production.                                                        |
+| * *Compute optimised* - High performance CPUs for production servers.                                                             |
+| * *Memory optimised* - Larger memory options for big databases or in-memory intensive data processing.                            |
+| * *Storage optimised* - Low-latency, high-disk performance for disk-intensive applications.                                       |
+| * *GPU* - Graphics- specialised VMs for rendering images or video processing.                                                     |
+| * *High-performance computing (HPC)* - A bit of everything! Plenty of CPU, memory, etc. for the most demanding workloads.         |
++-----------------------------------------------------------------------------------------------------------------------------------+
 
 .. image:: ../figures/01_Intro/portal_vm_step4.png
 
