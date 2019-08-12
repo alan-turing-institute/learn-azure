@@ -109,14 +109,18 @@ In the Portal
 | Public-key cryptography is a great way to verify identity.                                                                         |
 +------------------------------------------------------------------------------------------------------------------------------------+
 
-   Open the Cloud Shell by selecting the icon in the top bar of the dashboard.
-   (**N.B.:** The following commands could be executed in your own terminal as well, but we'll stick to one open window for now.)
-   The first time you launch the Cloud Shell, it will create some persistent storage that's always connected to your sessions.
-   This will allow you to save and retrieve scripts, configuration files and SSH keys.
-   Accept any prompts to create the storage account.
-   Make sure the "Bash" is selected from the drop-down menu in the upper-left corner of the Cloud Shell.
+Open the Cloud Shell by selecting the icon in the top bar of the dashboard.
+(**N.B.:** The following commands could be executed in your own terminal as well, but we'll stick to one open window for now.)
+The first time you launch the Cloud Shell, it will create some persistent storage that's always connected to your sessions.
+This will allow you to save and retrieve scripts, configuration files and SSH keys.
+Accept any prompts to create the storage account.
+Make sure the "Bash" is selected from the drop-down menu in the upper-left corner of the Cloud Shell.
 
 .. image:: ../figures/01_Intro/portal_vm_step6.png
+
+5. To create an SSH key pair, run the command: ``ssh-keygen``.
+   Accept the default prompts by pressing the "Enter" key (we won't use a pass phrase).
+   This command defaults to a `2,048-bit length <https://en.wikipedia.org/wiki/Password_strength#Required_bits_of_entropy>`_ key using the `RSA version 2 <https://en.wikipedia.org/wiki/RSA_(cryptosystem)>`_ protocol, which is a good balance of security.
 
 .. image:: ../figures/01_Intro/portal_vm_step7.png
 
