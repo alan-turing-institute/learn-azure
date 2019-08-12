@@ -130,6 +130,10 @@ Make sure the "Bash" is selected from the drop-down menu in the upper-left corne
 
 .. image:: ../figures/01_Intro/portal_vm_step8.png
 
+7. By default, Azure locks down access to the VM so we have to define how we want to receive login requests.
+   Select the "Allow selected ports" option and then select SSH from the drop-down menu.
+   Without this step, our login request would be denied even if the SSH keys pass the authentication step.
+
 .. image:: ../figures/01_Intro/portal_vm_step9.png
 
 .. image:: ../figures/01_Intro/portal_vm_step5.png
