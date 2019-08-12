@@ -210,3 +210,47 @@ These commands will be identical in either the Cloud Shell or CLI.
             --image UbuntuLTS \
             --size Standard_D2S_v3 \
             --output table
+
+This approach in much less involved than through the Portal and these commands can be collated into a script so that they can be executed autmoatically.
+
+Introduction to the Azure CLI
+=============================
+
+Now you've played with the CLI a little bit, let's delve deeper into it's structure.
+
+The CLI is broken down and organised into *commands* of *groups*.
+Each group represents a service, for example ``vm`` is "Virtual Machines", and commands operate on that service.
+There may also be sub-groups or sub-commands available depending on the service you're working with.
+We can also parse arguments to the command using "flags".
+These are denoted by the double dash ``--`` (for example, ``--name``), or may be shortened to a single dash and single character (for example, ``--name`` becomes ``-n``).
+Some of these flags are *global*, that is to say they are available for every command.
+
+Let's break down the command we used to create a VM.
+
+.. code-block::
+
+    az vm create \
+        --name webvm \
+        --resource-group learn-azure \
+        --admin-username YOUR_USERNAME \
+        --authentication-type ssh \
+        --generate-ssh-keys \
+        --image UbuntuLTS \
+        --size Standard_D2S_v3 \
+        --output table
+
+* All commands must start with ``az``. This tells your shell to use the Azure CLI software to interpret the following commands.
+* Since we're working with VMs, we use the *group* ``vm``.
+* We want to create a VM so we parse the ``create`` command.
+* We then parse a selection of arguments to define the properties of the VM we would like. In this case, only ``--name`` and ``--resource-group`` are required arguments.
+
+Global Arguments
+----------------
+
+There are five global arguments available to all Azure CLI commands:
+
+* ``--help [-h]``: Prints the CLI reference information about commands and their arguments and also lists available sub-groups and commands.
+* ``--output [-o]``: Changes the output format. The available formats are ``json``, ``jsonc`` (colorised JSON), ``tsv`` (Tab-Separated Values), ``table`` (human-readable ASCII tables), and ``yaml``. By default, the CLI outputs JSON.
+* ``--query``: Uses the `JMESPath query language <http://jmespath.org/>`_ to filter the output returned from Azure services. To learn more about queries, see `Query command results with Azure CLI <https://docs.microsoft.com/en-us/cli/azure/query-azure-cli?view=azure-cli-latest>`_ and the `JMESPath tutorial <http://jmespath.org/tutorial.html>`_.
+* ``--verbose``: Prints useful information about resources created in Azure during an operation.
+* ``debug``: Prints even more information about CLI operations for debugging purposes.
