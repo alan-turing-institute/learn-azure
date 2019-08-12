@@ -160,3 +160,39 @@ Make sure the "Bash" is selected from the drop-down menu in the upper-left corne
    Your VM is now being deployed!
 
 .. image:: ../figures/01_Intro/portal_vm_step10.png
+
+Using the Cloud Shell or CLI
+----------------------------
+
+These commands will be identical in either the Cloud Shell or CLI.
+
+1. Login to Azure.
+   (This step is only necessary for the CLI. The Cloud Shell is linked to your Portal login.)
+
+.. code-block::
+
+    az login
+
+2. Set your subscription.
+
+.. code-block::
+
+    az account set --subscription SUBSCRIPTION_NAME
+
+3. Create a Resource Group.
+
+.. code-block::
+
+    az group create --name learn-azure --location westeurope
+
+4. Create a VM.
+
+.. code-block::
+
+    az vm create \
+        --name webvm \
+        --resource-group learn-azure \
+        --admin-username YOUR_USERNAME \
+        --authentication-type ssh \
+        --generate-ssh-keys \
+        --image UbuntuLTS
