@@ -244,6 +244,8 @@ Let's break down the command we used to create a VM.
 * We want to create a VM so we parse the ``create`` command.
 * We then parse a selection of arguments to define the properties of the VM we would like. In this case, only ``--name`` and ``--resource-group`` are required arguments.
 
+The `Azure CLI Reference <https://docs.microsoft.com/en-gb/cli/azure/reference-index?view=azure-cli-latest>`_ is an excellent source of information on CLI groups and commands.
+
 Global Arguments
 ----------------
 
@@ -253,4 +255,4 @@ There are five global arguments available to all Azure CLI commands:
 * ``--output [-o]``: Changes the output format. The available formats are ``json``, ``jsonc`` (colorised JSON), ``tsv`` (Tab-Separated Values), ``table`` (human-readable ASCII tables), and ``yaml``. By default, the CLI outputs JSON.
 * ``--query``: Uses the `JMESPath query language <http://jmespath.org/>`_ to filter the output returned from Azure services. To learn more about queries, see `Query command results with Azure CLI <https://docs.microsoft.com/en-us/cli/azure/query-azure-cli?view=azure-cli-latest>`_ and the `JMESPath tutorial <http://jmespath.org/tutorial.html>`_.
 * ``--verbose``: Prints useful information about resources created in Azure during an operation.
-* ``debug``: Prints even more information about CLI operations for debugging purposes.
+* ``--debug``: Prints even more information about CLI operations for debugging purposes.
