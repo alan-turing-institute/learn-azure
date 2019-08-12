@@ -22,3 +22,19 @@ Azure Portal vs Azure Cloud Shell vs Azure CLI
 | CLI         | * Access to local files, tools and environments                                  | * Need to keep it updated                     |
 |             | * OS agnostic                                                                    |                                               |
 +-------------+----------------------------------------------------------------------------------+-----------------------------------------------+
+
+Creating a Virtual Machine
+==========================
+
++------------------------------------------------------------------------------------------------------------------------------------+
+| **Info:** Secure shell (SSH) key pairs                                                                                             |
+|                                                                                                                                    |
+| Secure shell is a protocol used to communicate securely with remote computers and it's the most common way to login to a Linux VM. |
+| With public-key cryptography, a digital key pair can be used to authenticate you with a remote Linux VM.                           |
+|                                                                                                                                    |
+| An SSH key pair has two parts: a public key and a private key.                                                                     |
+| The public key is stored on the VM in Azure and you keep a copy of the private key.                                                |
+| When a login request is made to the VM, the public key on the VM is matched with the private key on the computer trying to login.  |
+| If the key pairs match, the requesting computer is authenticated to login to the VM.                                               |
+| Public-key cryptography is a great way to verify identity.                                                                         |
++------------------------------------------------------------------------------------------------------------------------------------+
