@@ -31,6 +31,23 @@ In the Portal
 
 .. image:: ../figures/01_Intro/portal_vm_step1.png
 
+.. image:: ../figures/01_Intro/portal_vm_step2.png
+
+.. image:: ../figures/01_Intro/portal_vm_step3.png
+
+.. image:: ../figures/01_Intro/portal_vm_step4.png
+
+.. image:: ../figures/01_Intro/portal_vm_step5.png
+
+.. image:: ../figures/01_Intro/portal_vm_step6.png
+
+.. image:: ../figures/01_Intro/portal_vm_step7.png
+
+.. image:: ../figures/01_Intro/portal_vm_step8.png
+
+.. image:: ../figures/01_Intro/portal_vm_step9.png
+
+.. image:: ../figures/01_Intro/portal_vm_step10.png
 
 +------------------------------------------------------------------------------------------------------------------------------------+
 | **Info:** Secure shell (SSH) key pairs                                                                                             |
