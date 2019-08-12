@@ -62,11 +62,19 @@ In the Portal
 | In general, it's good practice to gather related resources into the same Resource Group.                     |
 +--------------------------------------------------------------------------------------------------------------+
 
-+---+
-| **Info:** Azure Regions and Locations |
-| |
-| |
-+---+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Info:** Azure Regions and Locations                                                                                                                                 |
+|                                                                                                                                                                       |
+| When creating resources in Azure, we often have to specify a Region or Location.                                                                                      |
+| This refers to the Data Centres where the physical infrastructure are situated.                                                                                       |
+|                                                                                                                                                                       |
+| A Location, for example "London", usually refers to a specific Data Centre whereas a Region, for example "UK South", may encompass multiple Data Centres.             |
+| Generally, it is best practice to define a Region and allow Azure to automatically place your resources based on availability, capacity and performance requirements. |
+| See the `Microsoft Docs <https://azure.microsoft.com/en-gb/global-infrastructure/locations/>`_ for more information.                                                  |
+|                                                                                                                                                                       |
+| There are no specific rules to consider when choosing a Region/Location to host your resources.                                                                       |
+| It is good practice to co-locate resources that interact with each other in order to reduce connection times.                                                         |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 +---+
 | **Info:** Azure VM types |
