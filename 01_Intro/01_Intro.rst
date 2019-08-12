@@ -154,7 +154,7 @@ Make sure the "Bash" is selected from the drop-down menu in the upper-left corne
 
 .. image:: ../figures/01_Intro/portal_vm_step5.png
 
-9. We're just about now!
+9. We're just about finished now!
    From the top of the pane, select "Review + create".
    When the green "Validation pass" banner appears, click "Create" at the bottom of the page.
    Your VM is now being deployed!
