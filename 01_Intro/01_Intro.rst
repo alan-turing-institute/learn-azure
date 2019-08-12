@@ -183,7 +183,7 @@ These commands will be identical in either the Cloud Shell or CLI.
 
 .. code-block::
 
-    az group create --name learn-azure --location westeurope
+    az group create --name learn-azure --location westeurope --output table
 
 4. Create a VM.
 
@@ -195,4 +195,6 @@ These commands will be identical in either the Cloud Shell or CLI.
         --admin-username YOUR_USERNAME \
         --authentication-type ssh \
         --generate-ssh-keys \
-        --image UbuntuLTS
+        --image UbuntuLTS \
+        --size Standard_D2S_v3 \
+        --output table
