@@ -35,6 +35,12 @@ In the Portal
 
 .. image:: ../figures/01_Intro/portal_vm_step1.png
 
+2. Select "Ubuntu 18.04 LTS" from the list (you may need to search for it).
+   This is the most recent version of Ubuntu.
+   LTS stands for Long Term Support.
+   If there's a newer version of Unbuntu LTS at time of reading, you should select that.
+   In the new window, click "Create".
+
 .. image:: ../figures/01_Intro/portal_vm_step2.png
 
 .. image:: ../figures/01_Intro/portal_vm_step3.png
