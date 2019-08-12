@@ -198,3 +198,15 @@ These commands will be identical in either the Cloud Shell or CLI.
         --image UbuntuLTS \
         --size Standard_D2S_v3 \
         --output table
+
+**Or** if you want to create an SSH key pair yourself like in the Portal example (perhaps pass a different filename when prompted), then::
+
+        az vm create \
+        --name webvm \
+        --resource-group learn-azure \
+        --admin-username YOUR_USERNAME \
+        --authentication-type ssh \
+        --ssh-key-value .ssh/new_rsa.pub \
+        --image UbuntuLTS \
+        --size Standard_D2S_v3 \
+        --output table
