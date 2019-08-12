@@ -92,17 +92,9 @@ In the Portal
 
 .. image:: ../figures/01_Intro/portal_vm_step4.png
 
-.. image:: ../figures/01_Intro/portal_vm_step6.png
-
-.. image:: ../figures/01_Intro/portal_vm_step7.png
-
-.. image:: ../figures/01_Intro/portal_vm_step8.png
-
-.. image:: ../figures/01_Intro/portal_vm_step9.png
-
-.. image:: ../figures/01_Intro/portal_vm_step5.png
-
-.. image:: ../figures/01_Intro/portal_vm_step10.png
+4. Next, create a user account on the VM.
+   This will be the account you login to when accessing the VM.
+   Choose a username and we will create SSH keys for the authentication protocol in the following steps.
 
 +------------------------------------------------------------------------------------------------------------------------------------+
 | **Info:** Secure shell (SSH) key pairs                                                                                             |
@@ -116,3 +108,15 @@ In the Portal
 | If the key pairs match, the requesting computer is authenticated to login to the VM.                                               |
 | Public-key cryptography is a great way to verify identity.                                                                         |
 +------------------------------------------------------------------------------------------------------------------------------------+
+
+.. image:: ../figures/01_Intro/portal_vm_step6.png
+
+.. image:: ../figures/01_Intro/portal_vm_step7.png
+
+.. image:: ../figures/01_Intro/portal_vm_step8.png
+
+.. image:: ../figures/01_Intro/portal_vm_step9.png
+
+.. image:: ../figures/01_Intro/portal_vm_step5.png
+
+.. image:: ../figures/01_Intro/portal_vm_step10.png
