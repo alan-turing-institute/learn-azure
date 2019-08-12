@@ -5,7 +5,7 @@
 Azure Portal vs Azure Cloud Shell vs Azure CLI
 ==============================================
 
-* CLI = Command Line Interface
+* CLI = Command Line Interface - A tool used in the terminal to connect to/interact with some service.
 
 +-------------+----------------------------------------------------------------------------------+-----------------------------------------------+
 |             | **Pros**                                                                         | **Cons**                                      |
@@ -135,6 +135,20 @@ Make sure the "Bash" is selected from the drop-down menu in the upper-left corne
    Without this step, our login request would be denied even if the SSH keys pass the authentication step.
 
 .. image:: ../figures/01_Intro/portal_vm_step9.png
+
+8. On the "Disks" tab at the top of the pane, we can define the type of storage to attach to the VM.
+   We are going to use "Standard SSD" from the drop-down menu.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Info:** Azure storage                                                                                                                                                                         |
+|                                                                                                                                                                                                 |
+| This is a brief introduction to basic disk storage.                                                                                                                                             |
+| Other types of storage with different levels of structure are available and will be discussed in another session.                                                                               |
+|                                                                                                                                                                                                 |
+| * *Standard Hard Drive disks* - This is a regular spinning disk. Ideal for infrequent data access.                                                                                              |
+| * *Standard Solid State Drives* - These lack the spinning disks and the movable read/write heads of HDDs. They have low-latency, quicker access times and are more resistent to physical shock. |
+| * *Premium SSDs* - High-performance SSDs for production workloads.                                                                                                                              |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. image:: ../figures/01_Intro/portal_vm_step5.png
 
