@@ -18,9 +18,11 @@ Azure Portal vs Azure Cloud Shell vs Azure CLI
 |             | * Compatible with VSCode and a mobile app                                        |                                               |
 |             | * Latest version is always available                                             |                                               |
 |             | * Persistent storage is attached so you can create/save scripts, templates, etc. |                                               |
+|             | * Commands can be collated into a script, making the process reproducible.       |                                               |
 +-------------+----------------------------------------------------------------------------------+-----------------------------------------------+
 | CLI         | * Access to local files, tools and environments                                  | * Need to keep it updated                     |
 |             | * OS agnostic                                                                    |                                               |
+|             | * Commands can be collated into a script, making the process reproducible.       |                                               |
 +-------------+----------------------------------------------------------------------------------+-----------------------------------------------+
 
 Creating a Virtual Machine
