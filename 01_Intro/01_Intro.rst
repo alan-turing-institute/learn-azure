@@ -51,14 +51,16 @@ In the Portal
    Give your VM a name - the example uses ``webvm``.
    Assign your VM a Region - the example uses "West Europe".
    This refers to where your VM will physically run.
-    You can also choose a different sized VM if you find you need more CPUs or memory, etc.
-    This example will deploy a DS2 v3 machine, which is classified as "General Purpose".
+   You can also choose a different sized VM if you find you need more CPUs or memory, etc.
+   This example will deploy a DS2 v3 machine, which is classified as "General Purpose".
 
-+---+
-| **Info:** Azure Resource Groups |
-| |
-| |
-+---+
++--------------------------------------------------------------------------------------------------------------+
+| **Info:** Azure Resource Groups                                                                              |
+|                                                                                                              |
+| A Resource Group in Azure is nothing more than a labelling system.                                           |
+| By selecting a Resource Group, you can easily list all the resources that have been allocated to that group. |
+| In general, it's good practice to gather related resources into the same Resource Group.                     |
++--------------------------------------------------------------------------------------------------------------+
 
 +---+
 | **Info:** Azure Regions and Locations |
