@@ -124,6 +124,10 @@ Make sure the "Bash" is selected from the drop-down menu in the upper-left corne
 
 .. image:: ../figures/01_Intro/portal_vm_step7.png
 
+6. We now give the public SSH key to the VM.
+   To view the key, run the command: ``cat .ssh/id_rsa.pub``.
+   Copy the output, and paste it into the "SSH public key" field.
+
 .. image:: ../figures/01_Intro/portal_vm_step8.png
 
 .. image:: ../figures/01_Intro/portal_vm_step9.png
