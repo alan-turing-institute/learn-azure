@@ -45,9 +45,34 @@ In the Portal
 
 .. image:: ../figures/01_Intro/portal_vm_step3.png
 
-.. image:: ../figures/01_Intro/portal_vm_step4.png
+3. We begin by completing the information on the "Basics" panel.
+   We select the subscription from the drop-down menu and create a new Resource Group we want to deploy the VM into by clicking "Create new" underneath the Resource Group box - the example will create a new group called ``learn-azure``.
+   (You could also deploy this into an existing Resource Group by selecting from the drop-down menu.)
+   Give your VM a name - the example uses ``webvm``.
+   Assign your VM a Region - the example uses "West Europe".
+   This refers to where your VM will physically run.
+    You can also choose a different sized VM if you find you need more CPUs or memory, etc.
+    This example will deploy a DS2 v3 machine, which is classified as "General Purpose".
 
-.. image:: ../figures/01_Intro/portal_vm_step5.png
++---+
+| **Info:** Azure Resource Groups |
+| |
+| |
++---+
+
++---+
+| **Info:** Azure Regions and Locations |
+| |
+| |
++---+
+
++---+
+| **Info:** Azure VM types |
+| |
+| |
++---+
+
+.. image:: ../figures/01_Intro/portal_vm_step4.png
 
 .. image:: ../figures/01_Intro/portal_vm_step6.png
 
@@ -56,6 +81,8 @@ In the Portal
 .. image:: ../figures/01_Intro/portal_vm_step8.png
 
 .. image:: ../figures/01_Intro/portal_vm_step9.png
+
+.. image:: ../figures/01_Intro/portal_vm_step5.png
 
 .. image:: ../figures/01_Intro/portal_vm_step10.png
 
