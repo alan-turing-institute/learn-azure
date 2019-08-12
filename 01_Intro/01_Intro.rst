@@ -29,6 +29,10 @@ Creating a Virtual Machine
 In the Portal
 -------------
 
+1. Login to the Azure Portal at https://portal.azure.com.
+   Once logged in, select "Create a Resource" in the upper-left corner of the dashboard.
+   Choose "Compute" from the list of resources and then select "See all" next to the "Featured" column.
+
 .. image:: ../figures/01_Intro/portal_vm_step1.png
 
 .. image:: ../figures/01_Intro/portal_vm_step2.png
