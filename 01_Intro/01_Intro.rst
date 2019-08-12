@@ -217,13 +217,14 @@ These commands can also be collated into a script so that they can be executed a
 Introduction to the Azure CLI
 =============================
 
-Now you've played with the CLI a little bit, let's delve deeper into it's structure.
+Now you've played with the CLI a little bit, let's delve deeper into its structure.
 
 The CLI is broken down and organised into *commands* of *groups*.
 Each group represents a service, for example ``vm`` is "Virtual Machines", and commands operate on that service.
-There may also be sub-groups or sub-commands available depending on the service you're working with.
-We can also parse arguments to the command using "flags".
-These are denoted by the double dash ``--`` (for example, ``--name``), or may be shortened to a single dash and single character (for example, ``--name`` becomes ``-n``).
+There may also be sub-groups or sub-commands available, depending on the service you're working with.
+
+We usually need to parse arguments to the command and we do this using "flags".
+Flags are denoted by the double dash ``--`` (for example, ``--name``), or may be shortened to a single dash and single character combination (for example, ``--name`` becomes ``-n``).
 Some of these flags are *global*, that is to say they are available for every command.
 
 Let's break down the command we used to create a VM.
