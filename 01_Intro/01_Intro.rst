@@ -280,8 +280,6 @@ Now we have created a VM, how do we connect to it?
    The third box in the panel will be the SSH command to connect to the VM.
    Copy this using the blue button.
 
-
-
 .. image:: ../figures/01_Intro/portal_vm_ssh1.png
 
 2. Open the Cloud Shell, paste the command into it and run it.
@@ -310,8 +308,7 @@ We are going to use the Azure CLI (in either a local terminal or the Cloud Shell
         --resource-group learn-azure-01 \
         --show-details \
         --query "osProfile.adminUsername" \
-        --output tsv
-    )
+        --output tsv)
 
 2. Now we will do the same for the IP address of the VM.
 
@@ -322,8 +319,7 @@ We are going to use the Azure CLI (in either a local terminal or the Cloud Shell
         --resource-group learn-azure-01 \
         --show-details \
         --query "publicIps" \
-        --output tsv
-    )
+        --output tsv)
 
 3. We can now use the variables to SSH into the machine.
 
@@ -337,3 +333,50 @@ We are going to use the Azure CLI (in either a local terminal or the Cloud Shell
 + The argument we parse to ``query`` is a `JMESPath <http://jmespath.org/>`_ expression, which is a query language for JSON files.    +
 + To see the JSON file where these values came from, run: ``az vm show --name webvm --resource-group learn-azure-01 --show-details``. +
 +-------------------------------------------------------------------------------------------------------------------------------------+
+
+Cleaning Up Resources
+=====================
+
+Cloud resources are not free so it's very important to clean up once resources are no longer being used in order to avoid large expenditure!
+We will be deleting the resource group we created at the end of every session to instill good habits!
+
+Deallocation versus Deletion
+----------------------------
+
+Some resources (for example, virtual machines) can be "deallocated".
+This means the physical hardware you have reserved in a data centre can be used by another Cloud customer.
+The resources can then be reallocated to you when you next need them.
+
+Deleting a resource also deallocates it, but all of your data is also removed and cannot be recovered.
+Make sure that you're certain you want to delete resources or that you have downloaded all your data elsewhere!
+
+Resources can be deleted individually, but also deleting the Resource Group removes all resources affiliated with it.
+This is the quickest way to remove a project in one step.
+
+In the Portal
+-------------
+
+1. Navigate to your Resource Groups and select ``learn-azure-01``.
+
+.. image:: ../figures/01_Intro/delete1.png
+
+2. In the top banner, select "Delete resource group".
+   In the panel that opens on the right, type the name of the resource group into the box (as confirmation) and click "Delete".
+
+.. image:: ../figures/01_Intro/delete2.png
+
+This will begin the deletion process which may take some time.
+
+Using the Cloud Shell or CLI
+----------------------------
+
+The CLI command to delete a resource group is as follows.
+
+.. code-block::
+
+    az group delete --name learn-azure-01
+
+It will ask for confirmation, type "yes" and continue.
+
+Resource groups can take a long time to be deleted, so if you don't want to want to wait for this process to be completed before reclaiming your shell session, pass the ``--no-wait`` flag.
+The confirmation step can also be bypassed by passing the ``--yes [-y]`` flag.
