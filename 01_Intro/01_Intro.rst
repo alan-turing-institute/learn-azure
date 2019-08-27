@@ -48,7 +48,7 @@ In the Portal
 .. image:: ../figures/01_Intro/portal_vm_step3.png
 
 3. We begin by completing the information on the "Basics" panel.
-   We select the subscription from the drop-down menu and create a new Resource Group we want to deploy the VM into by clicking "Create new" underneath the Resource Group box - the example will create a new group called ``learn-azure``.
+   We select the subscription from the drop-down menu and create a new Resource Group we want to deploy the VM into by clicking "Create new" underneath the Resource Group box - the example will create a new group called ``learn-azure-01``.
    (You could also deploy this into an existing Resource Group by selecting from the drop-down menu.)
    Give your VM a name - the example uses ``webvm``.
    Assign your VM a Region - the example uses "West Europe".
@@ -183,7 +183,7 @@ These commands will be identical in either the Cloud Shell or CLI.
 
 .. code-block::
 
-    az group create --name learn-azure --location westeurope --output table
+    az group create --name learn-azure-01 --location westeurope --output table
 
 4. Create a VM.
 
@@ -191,7 +191,7 @@ These commands will be identical in either the Cloud Shell or CLI.
 
     az vm create \
         --name webvm \
-        --resource-group learn-azure \
+        --resource-group learn-azure-01 \
         --admin-username YOUR_USERNAME \
         --authentication-type ssh \
         --generate-ssh-keys \
@@ -203,7 +203,7 @@ These commands will be identical in either the Cloud Shell or CLI.
 
         az vm create \
             --name webvm \
-            --resource-group learn-azure \
+            --resource-group learn-azure-01 \
             --admin-username YOUR_USERNAME \
             --authentication-type ssh \
             --ssh-key-value .ssh/new_rsa.pub \
@@ -233,7 +233,7 @@ Let's break down the command we used to create a VM.
 
     az vm create \
         --name webvm \
-        --resource-group learn-azure \
+        --resource-group learn-azure-01 \
         --admin-username YOUR_USERNAME \
         --authentication-type ssh \
         --generate-ssh-keys \
@@ -258,3 +258,82 @@ There are five global arguments available to all Azure CLI commands:
 * ``--query``: Uses the `JMESPath query language <http://jmespath.org/>`_ to filter the output returned from Azure services. To learn more about queries, see `Query command results with Azure CLI <https://docs.microsoft.com/en-us/cli/azure/query-azure-cli?view=azure-cli-latest>`_ and the `JMESPath tutorial <http://jmespath.org/tutorial.html>`_.
 * ``--verbose``: Prints useful information about resources created in Azure during an operation.
 * ``--debug``: Prints even more information about CLI operations for debugging purposes.
+
+Connecting to the VM
+====================
+
++--------------------------------------------------------------------------------------------------------------+
++ **Info:**                                                                                                    +
++                                                                                                              +
++ If you created your SSH key in the Cloud shell, you will **have** to connect to the VM from the Cloud shell. +
++ This is because your SSH key is stored in the Cloud Shell storage, **not** on your local machine.            +
++--------------------------------------------------------------------------------------------------------------+
+
+In the Portal
+-------------
+
+Now we have created a VM, how do we connect to it?
+
+1. When the VM has deployed, go to the resource page.
+   Then find the SSH command to login to the machine.
+   Click on "Connect" and this will open a panel on the right hand side.
+   The third box in the panel will be the SSH command to connect to the VM.
+   Copy this using the blue button.
+
+
+
+.. image:: ../figures/01_Intro/portal_vm_ssh1.png
+
+2. Open the Cloud Shell, paste the command into it and run it.
+   You will be asked to verify the host's authenticity - type "yes".
+
+.. image:: ../figures/01_Intro/portal_vm_ssh2.png
+
+You have now logged in to the VM!
+The VM used your SSH key to authenticate your login request.
+Since we have requested a Ubuntu server, all of the bash commands we learned will still work on this new machine.
+
+To exit the VM, type ``exit``.
+
+Using the Cloud Shell or CLI
+----------------------------
+
+We can achieve this more programatically using the CLI and bash variables.
+We are going to use the Azure CLI (in either a local terminal or the Cloud Shell) to return the username and IP address to access our VM and save them to bash variables.
+
+1. First we call return the username and save it to the variable ``USERNAME``.
+
+.. code-block::
+
+    USERNAME=$(az vm show \
+        --name webvm \
+        --resource-group learn-azure-01 \
+        --show-details \
+        --query "osProfile.adminUsername" \
+        --output tsv
+    )
+
+2. Now we will do the same for the IP address of the VM.
+
+.. code-block::
+
+    IP_ADDRESS=$(az vm show \
+        --name webvm \
+        --resource-group learn-azure-01 \
+        --show-details \
+        --query "publicIps" \
+        --output tsv
+    )
+
+3. We can now use the variables to SSH into the machine.
+
+.. code-block::
+
+    ssh $USERNAME@$IP_ADDRESS
+
++-------------------------------------------------------------------------------------------------------------------------------------+
++ **Info:**                                                                                                                           +
++                                                                                                                                     +
++ The argument we parse to ``query`` is a `JMESPath <http://jmespath.org/>`_ expression, which is a query language for JSON files.    +
++ To see the JSON file where these values came from, run: ``az vm show --name webvm --resource-group learn-azure-01 --show-details``. +
++-------------------------------------------------------------------------------------------------------------------------------------+
