@@ -2,6 +2,26 @@
  Introduction
 ==============
 
+Beginner's Command Line
+=======================
+
+Throughout this course we will be using the command line as much as possible.
+This is because submersing oneself in a new topic is often the most effective way of learning :wink:
+
+Open the Azure Cloud Shell (follow along with instructor for how to do this!) and we'll get started with some basica bash commands.
+
+1. ``pwd`` - This command tells you which directory you're in.
+2. ``ls`` - This command shows you what files are in the directory you're in. Use ``ls -a`` to see hidden files as well.
+3. ``cd`` - This command will take you to a different directory. It is case sensitive so type the directory name exactly as it is! It is also sensitive to white space, so we need to "escape" these with a backslash (``\``), e.g. ``cd My\ Folder``. To go "back" (or "up") one folder, use ``cd ..``.
+4. ``mkdir`` - This command will make a new directory.
+5. ``rmdir`` - This command will delete a directory *only if it is empty*.
+6. ``rm`` - This command will delete files. ``rm -r`` will also delete a directory *that is not empty*.
+7. ``cp`` - This command copies files. It takes two arguments: the first is the file to be copied, the second is where it should be copied to.
+8. ``mv`` - This command moves files to new locations and works similarly to ``cp``.
+
+This should be enough to get us started.
+See the `Intro to Command Line Bash Wiki page <https://github.com/alan-turing-institute/learn-azure/wiki/Intro-to-Command-Line-Bash>`_ for a more in-depth overview of commands and links to other tutorials.
+
 Azure Portal vs Azure Cloud Shell vs Azure CLI
 ==============================================
 
