@@ -207,6 +207,11 @@ These commands will be identical in either the Cloud Shell or CLI.
 
     az account set --subscription SUBSCRIPTION_NAME
 
+If your subscription name has spaces in it, you will need to surround it with quote marks.
+For example::
+
+    az account set --subscription "Living with Machines"
+
 3. Create a Resource Group.
 
 .. code-block::
