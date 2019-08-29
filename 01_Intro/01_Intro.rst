@@ -373,7 +373,9 @@ We are going to use the Azure CLI (in either a local terminal or the Cloud Shell
 + **Info:**                                                                                                                           +
 +                                                                                                                                     +
 + The argument we parse to ``query`` is a `JMESPath <http://jmespath.org/>`_ expression, which is a query language for JSON files.    +
-+ To see the JSON file where these values came from, run: ``az vm show --name webvm --resource-group learn-azure-01 --show-details``. +
++ To see the JSON file where these values came from, run::                                                                            +
++                                                                                                                                     +
++     az vm show --name webvm --resource-group learn-azure-01 --show-details                                                          +
 +-------------------------------------------------------------------------------------------------------------------------------------+
 
 Cleaning Up Resources
