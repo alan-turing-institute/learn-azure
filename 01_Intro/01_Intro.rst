@@ -8,7 +8,14 @@ Beginner's Command Line
 Throughout this course we will be using the command line as much as possible.
 This is because submersing oneself in a new topic is often the most effective way of learning :wink:
 
-Open the Azure Cloud Shell (follow along with instructor for how to do this!) and we'll get started with some basica bash commands.
+Open the Azure Cloud Shell (follow along with instructor for how to do this!) and we'll get started with some basic bash commands.
+
++---------------------------------------------------------------------------------------------------------------------------------------+
++ **Info:**                                                                                                                             +
++                                                                                                                                       +
++ The first time you open the Cloud Shell, you'll be asked to create a storage account.                                                 +
++ You set the subscription your storage will be associated with and, by using the advanced settings, you can also set a resource group. +
++---------------------------------------------------------------------------------------------------------------------------------------+
 
 1. ``pwd`` - This command tells you which directory you're in.
 2. ``ls`` - This command shows you what files are in the directory you're in. Use ``ls -a`` to see hidden files as well.
