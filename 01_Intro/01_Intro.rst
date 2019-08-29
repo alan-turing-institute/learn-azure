@@ -167,7 +167,7 @@ Make sure the "Bash" is selected from the drop-down menu in the upper-left corne
 .. image:: ../figures/01_Intro/portal_vm_step9.png
 
 8. On the "Disks" tab at the top of the pane, we can define the type of storage to attach to the VM.
-   We are going to use "Standard SSD" from the drop-down menu.
+   We are going to use "Standard HDD" from the drop-down menu.
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Info:** Azure storage                                                                                                                                                                         |
