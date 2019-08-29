@@ -354,6 +354,15 @@ We are going to use the Azure CLI (in either a local terminal or the Cloud Shell
         --query "publicIps" \
         --output tsv)
 
++--------------------------------------------------------------------+
+| **Info:**                                                          |
+|                                                                    |
+| To see the values saved in the bash variables, run the following:: |
+|                                                                    |
+|     echo $USERNAME                                                 |
+|     echo $IP_ADDRESS                                               |
++--------------------------------------------------------------------+
+
 3. We can now use the variables to SSH into the machine.
 
 .. code-block::
