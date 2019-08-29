@@ -77,7 +77,7 @@ In the Portal
 3. We begin by completing the information on the "Basics" panel.
    We select the subscription from the drop-down menu and create a new Resource Group we want to deploy the VM into by clicking "Create new" underneath the Resource Group box - the example will create a new group called ``learn-azure-01``.
    (You could also deploy this into an existing Resource Group by selecting from the drop-down menu.)
-   Give your VM a name - the example uses ``webvm``.
+   Give your VM a name - the example uses ``webvm``, you can use this or choose your own.
    Assign your VM a Region - the example uses "West Europe".
    This refers to where your VM will physically run.
    You can also choose a different sized VM if you find you need more CPUs or memory, etc.
