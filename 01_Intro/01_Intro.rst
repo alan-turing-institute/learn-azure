@@ -103,6 +103,7 @@ In the Portal
 |                                                                                                                                                                       |
 | There are no specific rules to consider when choosing a Region/Location to host your resources.                                                                       |
 | It is good practice to co-locate resources that interact with each other in order to reduce connection times.                                                         |
+| Sometimes a specific project may require resources be located in a certain region because of legal jurisdiction, local intellectual property laws, costs, etc.        |
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
