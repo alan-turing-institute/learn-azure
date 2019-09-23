@@ -7,8 +7,9 @@ A Brief Introduction to Azure
 
 A couple of links to get an overview.
 
-* https://docs.microsoft.com/en-gb/learn/modules/principles-cloud-computing/
+* https://www.youtube.com/watch?v=2zscgz-Pj_A <-- video!
 * https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/
+* https://docs.microsoft.com/en-gb/learn/modules/principles-cloud-computing/
 
 Beginner's Command Line
 =======================
