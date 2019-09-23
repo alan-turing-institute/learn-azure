@@ -281,6 +281,7 @@ Let's break down the command we used to create a VM.
         --generate-ssh-keys \
         --image UbuntuLTS \
         --size Standard_D2S_v3 \
+        --storage-sku Standard_LRS \
         --output table
 
 * All commands must start with ``az``. This tells your shell to use the Azure CLI software to interpret the following commands.
