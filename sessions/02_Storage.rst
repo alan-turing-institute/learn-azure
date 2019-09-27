@@ -64,7 +64,7 @@ An Azure storage table uses a *key-value* and is a good introduction to NoSQL da
 Exercise
 --------
 
-We are now going to see Azure Tables in action!
+We are now going to see Azure Tables in action using Python!
 
 1. Open the Azure Portal in a web browser and then open the Cloud Shell.
 
@@ -99,5 +99,5 @@ We are now going to see Azure Tables in action!
 
     python scripts/02_storage_table_demo.py
 
-7. Once you've worked through the script, read the script to see how Python can be used to automate Azure commands.
+7. Once you've worked through the script, read it to see how Python can be used to automate Azure commands.
    `02_storage_table_demo.py <https://github.com/alan-turing-institute/learn-azure/blob/sessions/2-storage/sessions/02_Storage.rst>`_
