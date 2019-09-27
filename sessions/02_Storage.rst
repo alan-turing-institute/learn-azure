@@ -18,12 +18,12 @@ Azure Storage can cover all of these needs!
 
 .. code-block::
 
-    |--* **Azure Storage account**
-       |--* **Blob**
-       |  |--* *Unstructured data, such as the images of the pizzas.*
-       |--* **Table**
-       |  |--* *Unstructured datastore, such as the list of available pizzas.*
-       |--* **Queue**
-       |  |--* *Messages between app components to process pizza orders.*
-       |--* **File**
-       |  |--* *Traditional file shares for VMs, such as storing logs from the app.*
+    |--* Azure Storage account
+       |--* Blob
+       |  |--* Unstructured data, such as the images of the pizzas.
+       |--* Table
+       |  |--* Unstructured datastore, such as the list of available pizzas.
+       |--* Queue
+       |  |--* Messages between app components to process pizza orders.
+       |--* File
+       |  |--* Traditional file shares for VMs, such as storing logs from the app.
