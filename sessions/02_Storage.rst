@@ -27,3 +27,36 @@ Azure Storage can cover all of these needs!
        |  |--* Messages between app components to process pizza orders.
        |--* File
        |  |--* Traditional file shares for VMs, such as storing logs from the app.
+
+Azure Storage for VMs is stragiht forward.
+You can create and use Azure managed disks, which is a type of virtual hard disk (VHD) that abstracts away a lot of design considerations around performance and distribution.
+The Azure platform will figure out redundancy and availability when you create a VM and attach any managed data disk.
+
+Types of Storage
+================
+
+Table Storage
+-------------
+
+You may have heard of SQL databases such as Microsoft SQL Server, MySQL or PostgreSQL.
+These are *relational* databases, made up of one or more tables that contain one or more rows of data.
+These types of databases are common for application development and can be designed, visualised, and queried in a structured manner - the *S* in *SQL* (for Structured Query Language).
+
+NoSQL databases are different.
+They don't follow the same structured approach, and data isn't stored in tables where each row contains the same fields.
+There are different implementations of NoSQL databases such as: MongoDB, Cassandra, SAP HANA, CouchDB, and Redis.
+The advantages of NoSQL databases are that they scale horizontally (you can add more servers rather than more memory or CPU), can handle larger amounts of data, and are more efficient at processing those large datasets.
+
+How the data is stored in such a database can be defined in a few ways:
+
+* *Key-value* (like a dictionary), such as Redis,
+* *Column*, such as Cassandra,
+* *Document*, such as MongoDB.
+
+Each approach has pros and cons for performance, flexibility, or complexity point of view.
+An Azure storage table uses a *key-value* and is a good introduction to NoSQL databases.
+
++----------------------------------------------------------------------------------------------------------------+
+| **Info:** You can download and install the Microsoft Azure Storage Explorer if you like to visualise the data. |
+| www.storageexplorer.com                                                                                        |
++----------------------------------------------------------------------------------------------------------------+
