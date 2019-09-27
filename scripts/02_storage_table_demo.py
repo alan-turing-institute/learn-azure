@@ -15,12 +15,12 @@ from azure.cosmosdb.table.models import Entity
 
 # Define variables to handle Azure authentication
 get_token_cli = subprocess.Popen(['az account get-access-token | jq  -r .accessToken'], stdout=subprocess.PIPE, shell=True)
-auth_token = str(get_token_cli.communicate()[0]).rstrip()
+auth_token = get_token_cli.communicate()[0].decode(encoding="utf-8").rstrip()
 subscription_id = azurerm.get_subscription_from_cli()
 
 # Define variables with random resource group and storage account names
-resourcegroup_name = 'learn-azure'+''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(6))
-storageaccount_name = 'learn-azure'+''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(6))
+resourcegroup_name = 'learnazure'+''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(6))
+storageaccount_name = 'learnazure'+''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(6))
 location = 'westeurope'
 
 ###
