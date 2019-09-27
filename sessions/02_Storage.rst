@@ -100,4 +100,4 @@ We are now going to see Azure Tables in action using Python!
     python scripts/02_storage_table_demo.py
 
 7. Once you've worked through the script, read it to see how Python can be used to automate Azure commands.
-   `02_storage_table_demo.py <https://github.com/alan-turing-institute/learn-azure/blob/sessions/2-storage/sessions/02_Storage.rst>`_
+   `02_storage_table_demo.py <https://github.com/alan-turing-institute/learn-azure/blob/sessions/2-storage/scripts/02_storage_table_demo.py>`_
