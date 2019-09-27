@@ -29,14 +29,14 @@ location = 'westeurope'
 ###
 response = azurerm.create_resource_group(auth_token, subscription_id, resourcegroup_name, location)
 if (response.status_code == 200) or (response.status_code == 201):
-    print(f"Resource group: {resourcegroup_name} created successfully.")
+    print("Resource group: {} created successfully.".format(resourcegroup_name))
 else:
     print('Error creating resource group')
 
 # Create a storage account for our demo
 response = azurerm.create_storage_account(auth_token, subscription_id, resourcegroup_name, storageaccount_name,  location, storage_type='Standard_LRS')
 if response.status_code == 202:
-    print(f'Storage account: {storageaccount_name} created successfully.')
+    print('Storage account: {} created successfully.'.format(storageaccount_name))
     print('\nWaiting for storage account to be ready before we create a Table')
     time.sleep(15)
 else:
