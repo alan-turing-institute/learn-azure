@@ -60,3 +60,44 @@ An Azure storage table uses a *key-value* and is a good introduction to NoSQL da
 | **Info:** You can download and install the Microsoft Azure Storage Explorer if you like to visualise the data. |
 | www.storageexplorer.com                                                                                        |
 +----------------------------------------------------------------------------------------------------------------+
+
+Exercise
+--------
+
+We are now going to see Azure Tables in action!
+
+1. Open the Azure Portal in a web browser and then open the Cloud Shell.
+
+2. Login to your Azure account.
+
+.. code-block::
+
+    az login
+
+3. Set your active subscription.
+
+.. code-block::
+
+    az account set --subscription "Living with Machines"
+
+4. Clone this GitHub repo and change into the directory.
+
+.. code-block::
+
+    git clone https://github.com/alan-turing-institute/learn-azure.git
+    cd learn-azure
+
+5. Install the dependencies.
+
+.. code-block::
+
+    pip install -r requirements.txt --user
+
+6. Now run the storage table demo script.
+
+.. code-block::
+
+    python scripts/02_storage_table_demo.py
+
+7. Once you've worked through the script, read the script to see how Python can be used to automate Azure commands.
+   `02_storage_table_demo.py <https://github.com/alan-turing-institute/learn-azure/blob/sessions/2-storage/sessions/02_Storage.rst>`_
