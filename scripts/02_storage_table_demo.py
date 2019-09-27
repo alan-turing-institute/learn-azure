@@ -70,7 +70,7 @@ time.sleep(1)
 # Use the Azure Storage Storage SDK for Python to create some entries in the Table
 ###
 print('Now let\'s add some entries to our Table.\nRemember, Azure Storage Tables is a NoSQL datastore, so this is similar to adding records to a database.')
-raw_input('Press Enter to continue...')
+input('Press Enter to continue...')
 
 # Each entry in a Table is called an 'entity'.
 # Here, we add an entry for first pizza with two pieces of data - the name, and the cost
