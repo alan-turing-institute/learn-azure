@@ -28,8 +28,8 @@ location = 'westeurope'
 # We need a resource group and a storage account. A random name is generated, as each storage account name must be globally unique.
 ###
 response = azurerm.create_resource_group(auth_token, subscription_id, resourcegroup_name, location)
-if response.status_code == 200 or response.status_code == 201:
-    print(f'Resource group: {resourcegroup_name} created successfully.')
+if (response.status_code == 200) or (response.status_code == 201):
+    print(f"Resource group: {resourcegroup_name} created successfully.")
 else:
     print('Error creating resource group')
 
