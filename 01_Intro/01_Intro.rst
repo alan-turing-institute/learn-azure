@@ -239,6 +239,7 @@ For example::
         --generate-ssh-keys \
         --image UbuntuLTS \
         --size Standard_D2S_v3 \
+        --storage-sku Standard_LRS \
         --output table
 
 **Or** if you want to create an SSH key pair yourself like in the Portal example (perhaps pass a different filename when prompted), then::
@@ -251,6 +252,7 @@ For example::
             --ssh-key-value .ssh/new_rsa.pub \
             --image UbuntuLTS \
             --size Standard_D2S_v3 \
+            --storage-sku Standard_LRS \
             --output table
 
 This approach in much less involved than through the Portal.
@@ -288,6 +290,7 @@ Let's break down the command we used to create a VM.
 * Since we're working with VMs, we use the *group* ``vm``.
 * We want to create a VM so we parse the ``create`` command.
 * We then parse a selection of arguments to define the properties of the VM we would like. In this case, only ``--name`` and ``--resource-group`` are required arguments.
+* The `--storge-sku Standard_LRS` flag is deploying a Standard HDD disk like we did in the Portal.
 
 The `Azure CLI Reference <https://docs.microsoft.com/en-gb/cli/azure/reference-index?view=azure-cli-latest>`_ is an excellent source of information on CLI groups and commands.
 
