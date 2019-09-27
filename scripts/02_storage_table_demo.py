@@ -127,7 +127,7 @@ time.sleep(1)
 # Although the actual cost is minimal (fractions of a cent per month) for the three entities we created, it's good to clean up resources when you're done
 ###
 print('\nThis is a basic example of how Azure Storage Tables behave like a database.\nTo keep things tidy, let\'s clean up the Azure Storage resources we created.')
-raw_input('Press Enter to continue...')
+input('Press Enter to continue...')
 
 response = table_service.delete_table('pizzatable')
 if response == True:
