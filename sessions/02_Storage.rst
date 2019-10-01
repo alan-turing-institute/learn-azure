@@ -54,6 +54,7 @@ An Azure storage table uses a *key-value* and is a good introduction to NoSQL da
 
 +----------------------------------------------------------------------------------------------------------------+
 | **Info:** You can download and install the Microsoft Azure Storage Explorer if you like to visualise the data. |
+| You can also edit content and amend the schema through this interface.                                         |
 | www.storageexplorer.com                                                                                        |
 +----------------------------------------------------------------------------------------------------------------+
 
