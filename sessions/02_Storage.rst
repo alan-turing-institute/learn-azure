@@ -48,12 +48,7 @@ There are different implementations of NoSQL databases such as: MongoDB, Cassand
 The advantages of NoSQL databases are that they scale horizontally (you can add more servers rather than more memory or CPU), can handle larger amounts of data, and are more efficient at processing those large datasets.
 The disadvantages are that NoSQL systems can easily enter inconsistent states, query languages and APIs are not standardised and they are less mature having smaller communities of support.
 
-How the data is stored in such a database can be defined in a few ways:
-
-* *Key-value* (like a dictionary), such as Redis,
-* *Column*, such as Cassandra,
-* *Document*, such as MongoDB.
-
+How the data is stored in such a database can be defined in a few ways: *Key-value* (like a dictionary), *Column*, and *Document*.
 Each approach has pros and cons for performance, flexibility, or complexity point of view.
 An Azure storage table uses a *key-value* and is a good introduction to NoSQL databases.
 
