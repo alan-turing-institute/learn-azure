@@ -64,6 +64,7 @@ Exercise
 We are now going to see Azure Tables in action using Python!
 
 1. Open the Azure Portal in a web browser and then open the Cloud Shell.
+   To open only the Cloud Shell, visit: `shell.azure.com <https://shell.azure.com/>`_
 
 2. Login to your Azure account.
 
