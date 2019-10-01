@@ -71,7 +71,7 @@ In the Portal
    Once logged in, select "Create a Resource" in the upper-left corner of the dashboard.
    Choose "Compute" from the list of resources and then select "See all" next to the "Featured" column.
 
-.. image:: ../figures/01_Intro/portal_vm_step1.png
+.. image:: ../figures/portal_vm_step1.png
 
 2. Select "Ubuntu 18.04 LTS" from the list (you may need to search for it).
    This is the most recent version of Ubuntu.
@@ -79,9 +79,9 @@ In the Portal
    If there's a newer version of Unbuntu LTS at time of reading, you should select that.
    In the new window, click "Create".
 
-.. image:: ../figures/01_Intro/portal_vm_step2.png
+.. image:: ../figures/portal_vm_step2.png
 
-.. image:: ../figures/01_Intro/portal_vm_step3.png
+.. image:: ../figures/portal_vm_step3.png
 
 3. We begin by completing the information on the "Basics" panel.
    We select the subscription from the drop-down menu and create a new Resource Group we want to deploy the VM into by clicking "Create new" underneath the Resource Group box - the example will create a new group called ``learn-azure-01``.
@@ -129,7 +129,7 @@ In the Portal
 | * *High-performance computing (HPC)* - A bit of everything! Plenty of CPU, memory, etc. for the most demanding workloads.         |
 +-----------------------------------------------------------------------------------------------------------------------------------+
 
-.. image:: ../figures/01_Intro/portal_vm_step4.png
+.. image:: ../figures/portal_vm_step4.png
 
 4. Next, create a user account on the VM.
    This will be the account you login to when accessing the VM.
@@ -155,25 +155,25 @@ This will allow you to save and retrieve scripts, configuration files and SSH ke
 Accept any prompts to create the storage account.
 Make sure the "Bash" is selected from the drop-down menu in the upper-left corner of the Cloud Shell.
 
-.. image:: ../figures/01_Intro/portal_vm_step6.png
+.. image:: ../figures/portal_vm_step6.png
 
 5. To create an SSH key pair, run the command: ``ssh-keygen``.
    Accept the default prompts by pressing the "Enter" key (we won't use a pass phrase).
    This command defaults to a `2,048-bit length <https://en.wikipedia.org/wiki/Password_strength#Required_bits_of_entropy>`_ key using the `RSA version 2 <https://en.wikipedia.org/wiki/RSA_(cryptosystem)>`_ protocol, which is a good balance of security.
 
-.. image:: ../figures/01_Intro/portal_vm_step7.png
+.. image:: ../figures/portal_vm_step7.png
 
 6. We now give the public SSH key to the VM.
    To view the key, run the command: ``cat .ssh/id_rsa.pub``.
    Copy the output, and paste it into the "SSH public key" field.
 
-.. image:: ../figures/01_Intro/portal_vm_step8.png
+.. image:: ../figures/portal_vm_step8.png
 
 7. By default, Azure locks down access to the VM so we have to define how we want to receive login requests.
    Select the "Allow selected ports" option and then select SSH from the drop-down menu.
    Without this step, our login request would be denied even if the SSH keys pass the authentication step.
 
-.. image:: ../figures/01_Intro/portal_vm_step9.png
+.. image:: ../figures/portal_vm_step9.png
 
 8. On the "Disks" tab at the top of the pane, we can define the type of storage to attach to the VM.
    We are going to use "Standard HDD" from the drop-down menu.
@@ -189,14 +189,14 @@ Make sure the "Bash" is selected from the drop-down menu in the upper-left corne
 | * *Premium SSDs* - High-performance SSDs for production workloads.                                                                                                                              |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. image:: ../figures/01_Intro/portal_vm_step5.png
+.. image:: ../figures/portal_vm_step5.png
 
 9. We're just about finished now!
    From the top of the pane, select "Review + create".
    When the green "Validation passed" banner appears, click "Create" at the bottom of the page.
    Your VM is now being deployed!
 
-.. image:: ../figures/01_Intro/portal_vm_step10.png
+.. image:: ../figures/portal_vm_step10.png
 
 Using the Cloud Shell or CLI
 ----------------------------
@@ -326,12 +326,12 @@ Now we have created a VM, how do we connect to it?
    The third box in the panel will be the SSH command to connect to the VM.
    Copy this using the blue button.
 
-.. image:: ../figures/01_Intro/portal_vm_ssh1.png
+.. image:: ../figures/portal_vm_ssh1.png
 
 2. Open the Cloud Shell, paste the command into it and run it.
    You will be asked to verify the host's authenticity - type "yes".
 
-.. image:: ../figures/01_Intro/portal_vm_ssh2.png
+.. image:: ../figures/portal_vm_ssh2.png
 
 You have now logged in to the VM!
 The VM used your SSH key to authenticate your login request.
@@ -415,12 +415,12 @@ In the Portal
 
 1. Navigate to your Resource Groups and select ``learn-azure-01``.
 
-.. image:: ../figures/01_Intro/delete1.png
+.. image:: ../figures/delete1.png
 
 2. In the top banner, select "Delete resource group".
    In the panel that opens on the right, type the name of the resource group into the box (as confirmation) and click "Delete".
 
-.. image:: ../figures/01_Intro/delete2.png
+.. image:: ../figures/delete2.png
 
 This will begin the deletion process which may take some time.
 
