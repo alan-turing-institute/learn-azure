@@ -46,6 +46,7 @@ NoSQL databases are different.
 They don't follow the same structured approach, and data isn't stored in tables where each row contains the same fields.
 There are different implementations of NoSQL databases such as: MongoDB, Cassandra, SAP HANA, CouchDB, and Redis.
 The advantages of NoSQL databases are that they scale horizontally (you can add more servers rather than more memory or CPU), can handle larger amounts of data, and are more efficient at processing those large datasets.
+The disadvantages are that NoSQL systems can easily enter inconsistent states, query languages and APIs are not standardised and they are less mature having smaller communities of support.
 
 How the data is stored in such a database can be defined in a few ways:
 
