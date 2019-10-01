@@ -2,7 +2,7 @@
 Azure Storage
 =============
 
-In this session, we're going to lookg at the different types of storage available in Azure and when to use them.
+In this session, we're going to look at the different types of storage available in Azure and when to use them.
 
 Introduction
 ============
@@ -28,7 +28,7 @@ Azure Storage can cover all of these needs!
        |--* File
        |  |--* Traditional file shares for VMs, such as storing logs from the app.
 
-Azure Storage for VMs is stragiht forward.
+Azure Storage for VMs is straight forward.
 You can create and use Azure managed disks, which is a type of virtual hard disk (VHD) that abstracts away a lot of design considerations around performance and distribution.
 The Azure platform will figure out redundancy and availability when you create a VM and attach any managed data disk.
 
