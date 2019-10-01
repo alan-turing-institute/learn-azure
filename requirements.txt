@@ -1,0 +1,3 @@
+azurerm==0.10.0
+azure-cosmosdb-table==1.0.5
+azure-storage-queue==2.1.0
