@@ -10,9 +10,9 @@ Introduction
 In Azure, there's much more available than "just" somewhere to store files or virtual disks for your VMs.
 
 Let's think about a fictional pizza company running an online service!
-The "backend" app needs a data store that holds the available pizzas, list of toppings, and prices.
+The "backend" app (all of the scripts and data processing our customers won't see) needs a data store that holds the available pizzas, list of toppings, and prices.
 As orders are received, the app needs to be able to send messages between the different components.
-The "frontend" website then needs images to show customers what the pizzas look like.
+The "frontend" website (the part our customers will actually interact with) then needs images to show customers what the pizzas look like.
 
 Azure Storage can cover all of these needs!
 
