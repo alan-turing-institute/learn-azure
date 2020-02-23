@@ -4,11 +4,19 @@ import subprocess
 
 
 class AzureVirtualMachine:
+    """Class to create and delete Virtual Machines in Azure"""
+
     def __init__(self, argsDict):
+        """Constructor class for AzureVirtualMachine class
+
+        Arguments:
+            argsDict {dict} -- Dictionary of command line options
+        """
         for k, v in argsDict.items():
             setattr(self, k, v)
 
     def create(self):
+        """Create a Virtual Machine in Azure"""
         self.login()
         self.set_subscription()
         self.resource_group()
@@ -40,13 +48,16 @@ class AzureVirtualMachine:
         subprocess.check_call(cmd)
 
     def delete(self):
+        """Delete a resource group in Azure"""
         self.login()
         subprocess.check_call(["az", "group", "delete", "--name", self.resource_group])
 
     def login(self):
+        """Interactively login to Azure"""
         subprocess.check_call(["az", "login", "--output", "none"])
 
     def resource_group(self):
+        """Check if a resource group exists. If not, create it"""
         resource_group_exists = subprocess.check_output(
             ["az", "group", "exists", "--name", self.resource_group]
         )
@@ -69,6 +80,7 @@ class AzureVirtualMachine:
             )
 
     def set_subscription(self):
+        """Set the selected Azure subscription"""
         cmd = ["az", "account", "set", "--subscription"]
 
         if " " in self.subscription:
@@ -80,10 +92,13 @@ class AzureVirtualMachine:
 
 
 def parse_args():
+    """Create a command line interface"""
+    # Add the main parser
     DESCRIPTION = "Create and delete a Virtual Machine in Azure"
     parser = argparse.ArgumentParser(description=DESCRIPTION)
     subparsers = parser.add_subparsers(dest="subcommand", required=True)
 
+    # Add the 'create' subparser and its arguments
     create_vm = subparsers.add_parser(
         "create", help="Create a Virtual Machine in Azure"
     )
@@ -128,6 +143,7 @@ def parse_args():
         help="Storage type to deploy. Default: Standard_LRS.",
     )
 
+    # Add the 'delete' subparser and its arguments
     delete_vm = subparsers.add_parser(
         "delete", help="Delete a Resource Group containing a Virtual Machine in Azure"
     )
@@ -139,8 +155,8 @@ def parse_args():
 
 
 def main():
+    """Main function"""
     args = parse_args()
-    print(args)
 
     azure_vm = AzureVirtualMachine(vars(args))
 
