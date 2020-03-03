@@ -19,7 +19,7 @@ class AzureVirtualMachine:
         """Create a Virtual Machine in Azure"""
         self.login()
         self.set_subscription()
-        self.resource_group()
+        self.configure_resource_group()
 
         cmd = [
             "az",
@@ -39,11 +39,14 @@ class AzureVirtualMachine:
             self.image,
             "--size",
             self.size,
-            "--storage-sku",
-            self.storage,
             "--output",
             "table",
         ]
+
+        if self.storage == "blobfuse":
+            cmd.extend(["--storage-sku", "Standard_LRS", "--custom-data", os.path.abspath("hello-world.sh")])
+        else:
+            cmd.extend(["--storage-sku", self.storage])
 
         subprocess.check_call(cmd)
 
@@ -71,13 +74,13 @@ class AzureVirtualMachine:
         """Interactively login to Azure"""
         subprocess.check_call(["az", "login", "--output", "none"])
 
-    def resource_group(self):
+    def configure_resource_group(self):
         """Check if a resource group exists. If not, create it"""
         resource_group_exists = subprocess.check_output(
             ["az", "group", "exists", "--name", self.resource_group]
-        )
+        ).decode(encoding=("utf-8")).strip("\n")
 
-        if not resource_group_exists:
+        if resource_group_exists == 'false':
             if " " in self.location:
                 self.location = "".join(self.location.lower().split(" "))
             subprocess.check_call(
@@ -154,6 +157,7 @@ def parse_args():
     create_vm.add_argument(
         "--storage",
         type=str,
+        choices=["Standard_LRS", "blobfuse"],
         default="Standard_LRS",
         help="Storage type to deploy. Default: Standard_LRS.",
     )
