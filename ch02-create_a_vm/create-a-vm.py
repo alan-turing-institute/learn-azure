@@ -44,7 +44,14 @@ class AzureVirtualMachine:
         ]
 
         if self.storage == "blobfuse":
-            cmd.extend(["--storage-sku", "Standard_LRS", "--custom-data", os.path.abspath("hello-world.sh")])
+            cmd.extend(
+                [
+                    "--storage-sku",
+                    "Standard_LRS",
+                    "--custom-data",
+                    os.path.abspath("hello-world.sh"),
+                ]
+            )
         else:
             cmd.extend(["--storage-sku", self.storage])
 
@@ -76,11 +83,15 @@ class AzureVirtualMachine:
 
     def configure_resource_group(self):
         """Check if a resource group exists. If not, create it"""
-        resource_group_exists = subprocess.check_output(
-            ["az", "group", "exists", "--name", self.resource_group]
-        ).decode(encoding=("utf-8")).strip("\n")
+        resource_group_exists = (
+            subprocess.check_output(
+                ["az", "group", "exists", "--name", self.resource_group]
+            )
+            .decode(encoding=("utf-8"))
+            .strip("\n")
+        )
 
-        if resource_group_exists == 'false':
+        if resource_group_exists == "false":
             if " " in self.location:
                 self.location = "".join(self.location.lower().split(" "))
             subprocess.check_call(
