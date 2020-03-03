@@ -47,6 +47,21 @@ class AzureVirtualMachine:
 
         subprocess.check_call(cmd)
 
+    def deallocate(self):
+        """Deallocate an Azure Virtual Machine"""
+        self.login()
+        subprocess.check_call(
+            [
+                "az",
+                "vm",
+                "deallocate",
+                "--name",
+                self.name,
+                "--resource-group",
+                self.resource_group,
+            ]
+        )
+
     def delete(self):
         """Delete a resource group in Azure"""
         self.login()
@@ -151,6 +166,17 @@ def parse_args():
         "resource_group", type=str, help="The resource group to be deleted"
     )
 
+    # Add the 'deallocate' subparser and its arguments
+    deallocate_vm = subparsers.add_parser(
+        "deallocate", help="Deallocate an Azure Virtual Machine"
+    )
+    deallocate_vm.add_argument(
+        "name", type=str, help="The name of the VM to be deallocated"
+    )
+    deallocate_vm.add_argument(
+        "group", type=str, help="The Resource Group containing the VM"
+    )
+
     return parser.parse_args()
 
 
@@ -164,6 +190,8 @@ def main():
         azure_vm.create()
     elif args.subcommand == "delete":
         azure_vm.delete()
+    elif args.subcommand == "deallocate":
+        azure_vm.deallocate()
 
 
 if __name__ == "__main__":
